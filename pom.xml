@@ -37,14 +37,36 @@
             <version>5.6.2</version>
             <scope>test</scope>
         </dependency>
+
+        <!-- ExtentReports for HTML reporting -->
+        <dependency>
+            <groupId>com.aventstack</groupId>
+            <artifactId>extentreports</artifactId>
+            <version>5.1.1</version>
+        </dependency>
     </dependencies>
 
     <build>
         <plugins>
+            <!-- Surefire Plugin for running tests -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.0.0</version>
+            </plugin>
+
+            <!-- Surefire Report Plugin for basic HTML reports -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-report-plugin</artifactId>
+                <version>3.0.0</version>
+            </plugin>
+
+            <!-- Maven Site Plugin -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-site-plugin</artifactId>
+                <version>3.12.1</version>
             </plugin>
         </plugins>
     </build>
